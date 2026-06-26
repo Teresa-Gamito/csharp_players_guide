@@ -1,0 +1,14 @@
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/bin/Debug/net10.0/ex5
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/bin/Debug/net10.0/ex5.deps.json
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/bin/Debug/net10.0/ex5.runtimeconfig.json
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/bin/Debug/net10.0/ex5.dll
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/bin/Debug/net10.0/ex5.pdb
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ex5.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ex5.AssemblyInfoInputs.cache
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ex5.AssemblyInfo.cs
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ex5.csproj.CoreCompileInputs.cache
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ex5.dll
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/refint/ex5.dll
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ex5.pdb
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ex5.genruntimeconfig.cache
+/home/kitty/personal/csharp_player_guide/ex5-the_thing_namer_3000/obj/Debug/net10.0/ref/ex5.dll

@@ -1,0 +1,14 @@
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/bin/Debug/net10.0/ex2-what_comes_next
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/bin/Debug/net10.0/ex2-what_comes_next.deps.json
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/bin/Debug/net10.0/ex2-what_comes_next.runtimeconfig.json
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/bin/Debug/net10.0/ex2-what_comes_next.dll
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/bin/Debug/net10.0/ex2-what_comes_next.pdb
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ex2-what_comes_next.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ex2-what_comes_next.AssemblyInfoInputs.cache
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ex2-what_comes_next.AssemblyInfo.cs
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ex2-what_comes_next.csproj.CoreCompileInputs.cache
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ex2-what_comes_next.dll
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/refint/ex2-what_comes_next.dll
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ex2-what_comes_next.pdb
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ex2-what_comes_next.genruntimeconfig.cache
+/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/obj/Debug/net10.0/ref/ex2-what_comes_next.dll

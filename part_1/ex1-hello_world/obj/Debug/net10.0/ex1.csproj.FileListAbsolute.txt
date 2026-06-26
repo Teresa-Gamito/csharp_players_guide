@@ -1,0 +1,14 @@
+/home/kitty/personal/csharp_player_guide/ex1/bin/Debug/net10.0/ex1
+/home/kitty/personal/csharp_player_guide/ex1/bin/Debug/net10.0/ex1.deps.json
+/home/kitty/personal/csharp_player_guide/ex1/bin/Debug/net10.0/ex1.runtimeconfig.json
+/home/kitty/personal/csharp_player_guide/ex1/bin/Debug/net10.0/ex1.dll
+/home/kitty/personal/csharp_player_guide/ex1/bin/Debug/net10.0/ex1.pdb
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ex1.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ex1.AssemblyInfoInputs.cache
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ex1.AssemblyInfo.cs
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ex1.csproj.CoreCompileInputs.cache
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ex1.dll
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/refint/ex1.dll
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ex1.pdb
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ex1.genruntimeconfig.cache
+/home/kitty/personal/csharp_player_guide/ex1/obj/Debug/net10.0/ref/ex1.dll

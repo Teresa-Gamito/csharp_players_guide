@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oMKMnrzYTIE=",
+  "success": true,
+  "projectFilePath": "/home/kitty/personal/csharp_player_guide/part_2/ex18-the_old_robot/ex.csproj",
+  "expectedPackageFiles": [
+    "/home/kitty/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.8/microsoft.aspnetcore.app.ref.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

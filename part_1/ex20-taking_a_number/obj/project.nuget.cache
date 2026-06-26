@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7Gt/i4pk2t0=",
+  "success": true,
+  "projectFilePath": "/home/kitty/personal/csharp_player_guide/ex20-taking_a_number/ex.csproj",
+  "expectedPackageFiles": [
+    "/home/kitty/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.8/microsoft.aspnetcore.app.ref.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

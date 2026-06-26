@@ -1,0 +1,14 @@
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/bin/Debug/net10.0/ex
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/bin/Debug/net10.0/ex.deps.json
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/bin/Debug/net10.0/ex.runtimeconfig.json
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/bin/Debug/net10.0/ex.dll
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/bin/Debug/net10.0/ex.pdb
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ex.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ex.AssemblyInfoInputs.cache
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ex.AssemblyInfo.cs
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ex.csproj.CoreCompileInputs.cache
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ex.dll
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/refint/ex.dll
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ex.pdb
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ex.genruntimeconfig.cache
+/home/kitty/personal/csharp_player_guide/ex22-hunting_the_manticore/obj/Debug/net10.0/ref/ex.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "t024OQCMknk=",
+  "success": true,
+  "projectFilePath": "/home/kitty/personal/csharp_player_guide/ex2-what_comes_next/ex2-what_comes_next.csproj",
+  "expectedPackageFiles": [
+    "/home/kitty/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.8/microsoft.aspnetcore.app.ref.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "Djy6IPwFT5g=",
+  "success": true,
+  "projectFilePath": "/home/kitty/personal/csharp_player_guide/ex7-the_variable_shop_returns/ex6.csproj",
+  "expectedPackageFiles": [
+    "/home/kitty/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.8/microsoft.aspnetcore.app.ref.10.0.8.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "/home/kitty/personal/csharp_player_guide/ex7-the_variable_shop_returns/ex6.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/kitty/personal/csharp_player_guide/ex7-the_variable_shop_returns/ex6.csproj",
+      "targetGraphs": []
+    }
+  ]
+}

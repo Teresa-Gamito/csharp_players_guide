@@ -1,0 +1,14 @@
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/bin/Debug/net10.0/ex6
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/bin/Debug/net10.0/ex6.deps.json
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/bin/Debug/net10.0/ex6.runtimeconfig.json
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/bin/Debug/net10.0/ex6.dll
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/bin/Debug/net10.0/ex6.pdb
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ex6.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ex6.AssemblyInfoInputs.cache
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ex6.AssemblyInfo.cs
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ex6.csproj.CoreCompileInputs.cache
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ex6.dll
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/refint/ex6.dll
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ex6.pdb
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ex6.genruntimeconfig.cache
+/home/kitty/personal/csharp_player_guide/ex6-the_variable_shop/obj/Debug/net10.0/ref/ex6.dll

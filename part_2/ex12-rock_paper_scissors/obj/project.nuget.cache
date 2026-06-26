@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WqBqJH4RHWQ=",
+  "success": true,
+  "projectFilePath": "/home/kitty/personal/csharp_player_guide/part_2/ex12-rock_paper_scissors/ex.csproj",
+  "expectedPackageFiles": [
+    "/home/kitty/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.8/microsoft.aspnetcore.app.ref.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

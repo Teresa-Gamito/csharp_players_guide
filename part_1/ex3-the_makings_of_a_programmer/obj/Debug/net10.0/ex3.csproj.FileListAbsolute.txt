@@ -1,0 +1,14 @@
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/bin/Debug/net10.0/ex3
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/bin/Debug/net10.0/ex3.deps.json
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/bin/Debug/net10.0/ex3.runtimeconfig.json
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/bin/Debug/net10.0/ex3.dll
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/bin/Debug/net10.0/ex3.pdb
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ex3.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ex3.AssemblyInfoInputs.cache
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ex3.AssemblyInfo.cs
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ex3.csproj.CoreCompileInputs.cache
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ex3.dll
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/refint/ex3.dll
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ex3.pdb
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ex3.genruntimeconfig.cache
+/home/kitty/personal/csharp_player_guide/ex3-the_makings_of_a_programmer/obj/Debug/net10.0/ref/ex3.dll
