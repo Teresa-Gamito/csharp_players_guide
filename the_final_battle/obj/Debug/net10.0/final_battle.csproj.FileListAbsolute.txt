@@ -1,0 +1,15 @@
+/home/kitty/personal/csharp_player_guide/the_final_battle/bin/Debug/net10.0/final_battle
+/home/kitty/personal/csharp_player_guide/the_final_battle/bin/Debug/net10.0/final_battle.deps.json
+/home/kitty/personal/csharp_player_guide/the_final_battle/bin/Debug/net10.0/final_battle.runtimeconfig.json
+/home/kitty/personal/csharp_player_guide/the_final_battle/bin/Debug/net10.0/final_battle.dll
+/home/kitty/personal/csharp_player_guide/the_final_battle/bin/Debug/net10.0/final_battle.pdb
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.AssemblyInfoInputs.cache
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.AssemblyInfo.cs
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.csproj.CoreCompileInputs.cache
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.sourcelink.json
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.dll
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/refint/final_battle.dll
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.pdb
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/final_battle.genruntimeconfig.cache
+/home/kitty/personal/csharp_player_guide/the_final_battle/obj/Debug/net10.0/ref/final_battle.dll
