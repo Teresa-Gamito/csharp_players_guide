@@ -1,7 +1,6 @@
-using Entities.Actions.Attacks;
+using Attacks;
 
-namespace Entities.Characters
-{
+namespace Characters;
 
 public class TrueProgrammer : Character
 {
@@ -11,6 +10,4 @@ public class TrueProgrammer : Character
     {
         Actions.Add(new Punch());
     }
-}
-
 }

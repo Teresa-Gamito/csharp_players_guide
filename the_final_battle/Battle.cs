@@ -1,6 +1,3 @@
-using Entities;
-using Entities.Characters;
-
 public class Battle
 {
     public List<Party> Parties { get; } = new();

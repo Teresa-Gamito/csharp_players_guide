@@ -1,7 +1,7 @@
 namespace Players
 {
 
-public class AIPlayer : Player
+public class AIPlayer : Player, IPlay
 {
     Random _random = new Random();
 

@@ -1,5 +1,4 @@
-namespace Entities.Actions.Attacks
-{
+namespace Attacks;
 
 public class AttackData
 {
@@ -9,6 +8,4 @@ public class AttackData
     {
         Damage = damage;
     }
-}
-
 }

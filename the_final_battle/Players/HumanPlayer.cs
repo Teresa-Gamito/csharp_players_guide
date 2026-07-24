@@ -1,7 +1,7 @@
 namespace Players
 {
 
-public class HumanPlayer : Player
+public class HumanPlayer : Player, IPlay
 {
     public override int ChooseOption(int optionCount)
     {
