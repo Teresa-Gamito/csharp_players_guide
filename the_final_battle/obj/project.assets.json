@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "/home/kitty/.nuget/packages/": {}
+    "/home/tessy/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kitty/personal/csharp_player_guide/the_final_battle/final_battle.csproj",
-      "projectName": "final_battle",
-      "projectPath": "/home/kitty/personal/csharp_player_guide/the_final_battle/final_battle.csproj",
-      "packagesPath": "/home/kitty/.nuget/packages/",
-      "outputPath": "/home/kitty/personal/csharp_player_guide/the_final_battle/obj/",
+      "projectUniqueName": "/home/tessy/programming/csharp_players_guide/the_final_battle/FinalBattle.csproj",
+      "projectName": "FinalBattle",
+      "projectPath": "/home/tessy/programming/csharp_players_guide/the_final_battle/FinalBattle.csproj",
+      "packagesPath": "/home/tessy/.nuget/packages/",
+      "outputPath": "/home/tessy/programming/csharp_players_guide/the_final_battle/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/kitty/.nuget/NuGet/NuGet.Config"
+        "/home/tessy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -60,18 +60,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[10.0.8, 10.0.8]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.108/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.111/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

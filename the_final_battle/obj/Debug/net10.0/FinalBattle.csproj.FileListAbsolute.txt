@@ -1,0 +1,15 @@
+/home/tessy/programming/csharp_players_guide/the_final_battle/bin/Debug/net10.0/FinalBattle
+/home/tessy/programming/csharp_players_guide/the_final_battle/bin/Debug/net10.0/FinalBattle.deps.json
+/home/tessy/programming/csharp_players_guide/the_final_battle/bin/Debug/net10.0/FinalBattle.runtimeconfig.json
+/home/tessy/programming/csharp_players_guide/the_final_battle/bin/Debug/net10.0/FinalBattle.dll
+/home/tessy/programming/csharp_players_guide/the_final_battle/bin/Debug/net10.0/FinalBattle.pdb
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.GeneratedMSBuildEditorConfig.editorconfig
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.AssemblyInfoInputs.cache
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.AssemblyInfo.cs
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.csproj.CoreCompileInputs.cache
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.sourcelink.json
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.dll
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/refint/FinalBattle.dll
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.pdb
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/FinalBattle.genruntimeconfig.cache
+/home/tessy/programming/csharp_players_guide/the_final_battle/obj/Debug/net10.0/ref/FinalBattle.dll

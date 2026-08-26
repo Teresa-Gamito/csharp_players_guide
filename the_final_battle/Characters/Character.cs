@@ -1,27 +1,45 @@
-using Attacks;
+namespace FinalBattle.Characters;
 
-namespace Characters;
+using FinalBattle.Attacks;
 
 public abstract class Character
 {
-    public abstract string? Name { get; }
-
     public abstract int MaxHP { get; }
-    public int HP { get; set; }
+    public abstract string Name { get; }
+    public abstract IAttack Attack { get; } 
 
-    public List<IAttack> Attacks { get; set; } = new();
+    public int HP;
+    public bool IsDefeated => HP == 0;
 
-    public bool IsDefeated => HP <= 0;
+    public Character() => HP = MaxHP;
 
-    public void Heal(int healFactor)
+    public void Damage(int value)
     {
-        HP += healFactor;
+        HP -= value;
+        if (HP < 0) HP = 0;
+    }
+    
+    public void Heal(int value)
+    {
+        HP += value;
         if (HP > MaxHP) HP = MaxHP;
     }
 
-    public void Damage(int damage)
-    {
-        HP -= damage;
-        if (HP < 0) HP = 0;
-    }
+}
+
+public class Skeleton : Character
+{
+    public override int MaxHP { get; } = 5;
+    public override string Name { get; } = "SKELETON";
+    public override IAttack Attack { get; } = new BoneCrunchAttack();
+
+}
+
+public class TrueProgrammer : Character
+{
+    public override int MaxHP { get; } = 25;
+    public override IAttack Attack { get; } = new PunchAttack();
+    public override string Name { get; }
+
+    public TrueProgrammer(string name) : base() => Name = name;
 }

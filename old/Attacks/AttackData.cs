@@ -1,8 +1,8 @@
-namespace FinalBattle.Attacks;
+namespace Attacks;
 
 public class AttackData
 {
-    public int Damage { get; }
+    public int Damage { get; set; }
 
     public AttackData(int damage)
     {
