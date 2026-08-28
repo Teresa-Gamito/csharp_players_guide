@@ -4,6 +4,7 @@ using FinalBattle.Parties;
 using FinalBattle.Players;
 using FinalBattle.Actions;
 using FinalBattle.Characters;
+using FinalBattle.GameConsole;
 
 public class Battle
 {
@@ -28,19 +29,24 @@ public class Battle
     {
         foreach (Character character in ActiveParty.Characters)
         {
-            Console.WriteLine("It is " + character.Name + "'s turn...");
+            Console.WriteLine("It is " + character.Name + "'s turn...\n");
+            GameConsole.DisplayBattleStatus(this, character);
 
             IPlayer player = ActiveParty.Player;
-            IAction action = player.ChooseAction(character);
-            Character target = player.ChooseCharacter(OpposingParty);
 
-            action.Run(character, target);
+            IAction action = player.ChooseAction(character, this);
 
-            if (target.IsDefeated) 
+            action.Run(character, this);
+
+            foreach (Character target in OpposingParty.Characters)
             {
-                OpposingParty.Characters.Remove(target);
-                Console.WriteLine(target.Name + " has been defeated!");
-                Console.WriteLine();
+                if (target.IsDefeated) 
+                {
+                    OpposingParty.Characters.Remove(target);
+                    Console.WriteLine(target.Name + " has been defeated!");
+                    Console.WriteLine();
+                    break;
+                }
             }
             if (OpposingParty.IsDefeated)
             {
@@ -72,8 +78,12 @@ public class Battle
         Console.WriteLine();
     }
 
-    public void DisplayStatus()
+    public Party GetCharacterParty(Character character)
     {
-
+        return Heroes.Characters.Contains(character) ? Heroes : Monsters;
+    }
+    public Party GetOpposingParty(Character character)
+    {
+        return GetCharacterParty(character) == Heroes ? Monsters : Heroes;
     }
 }

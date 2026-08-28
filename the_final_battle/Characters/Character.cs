@@ -6,7 +6,7 @@ public abstract class Character
 {
     public abstract int MaxHP { get; }
     public abstract string Name { get; }
-    public abstract IAttack Attack { get; } 
+    public List<IAttack> Attacks { get; } = new List<IAttack>();
 
     public int HP;
     public bool IsDefeated => HP == 0;
@@ -31,7 +31,11 @@ public class Skeleton : Character
 {
     public override int MaxHP { get; } = 5;
     public override string Name { get; } = "SKELETON";
-    public override IAttack Attack { get; } = new BoneCrunchAttack();
+
+    public Skeleton()
+    {
+        Attacks.Add(new BoneCrunchAttack());
+    }
 
 }
 
@@ -39,14 +43,21 @@ public class TrueProgrammer : Character
 {
     public override int MaxHP { get; } = 25;
     public override string Name { get; }
-    public override IAttack Attack { get; } = new PunchAttack();
 
-    public TrueProgrammer(string name) : base() => Name = name;
+    public TrueProgrammer(string name) : base()
+    {
+        Name = name; 
+        Attacks.Add(new PunchAttack());
+    }
 }
 
 public class UncodedOne : Character
 {
     public override int MaxHP { get; } = 15;
     public override string Name { get; } = "THE UNCODED ONE";
-    public override IAttack Attack { get; } = new UnravelingAttack();
+
+    public UncodedOne()
+    {
+        Attacks.Add(new UnravelingAttack());
+    }
 }
