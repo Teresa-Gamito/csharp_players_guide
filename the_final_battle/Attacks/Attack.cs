@@ -27,3 +27,14 @@ public class BoneCrunchAttack : IAttack
         return new AttackData(_random.Next(1 + 1));
     }
 }
+
+public class UnravelingAttack : IAttack
+{
+    private Random _random = new Random();
+    public string Name { get; } = "UNRAVELING";
+
+    public AttackData GetData()
+    {
+        return new AttackData(_random.Next(2 + 1));
+    }
+}

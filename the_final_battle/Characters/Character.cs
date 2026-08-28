@@ -38,8 +38,15 @@ public class Skeleton : Character
 public class TrueProgrammer : Character
 {
     public override int MaxHP { get; } = 25;
-    public override IAttack Attack { get; } = new PunchAttack();
     public override string Name { get; }
+    public override IAttack Attack { get; } = new PunchAttack();
 
     public TrueProgrammer(string name) : base() => Name = name;
+}
+
+public class UncodedOne : Character
+{
+    public override int MaxHP { get; } = 15;
+    public override string Name { get; } = "THE UNCODED ONE";
+    public override IAttack Attack { get; } = new UnravelingAttack();
 }

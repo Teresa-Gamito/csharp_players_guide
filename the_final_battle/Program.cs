@@ -3,23 +3,24 @@ using FinalBattle.Characters;
 using FinalBattle.Parties;
 using FinalBattle.Players;
 
-IPlayer player1 = new PlayerAI();
-IPlayer player2 = new PlayerAI();
+Console.Clear();
+Console.WriteLine("Final Battle!");
+Console.WriteLine();
+
+(IPlayer player1, IPlayer player2) = PlayerHuman.ChoosePlayers();
 
 Party heroes = new Party(player1);
 string name = heroes.Player.GetPlayerName();
 heroes.Characters.Add(new TrueProgrammer(name));
 
-List<Party> monsters = new List<Party>
-{ 
-    new Party(player2),
-    new Party(player2)
-};
+List<Party> monsters = new List<Party>();
+monsters.Add(new Party(player2, new Skeleton()));
+monsters.Add(new Party(player2, new Skeleton(), new Skeleton()));
+monsters.Add(new Party(player2, new UncodedOne()));
 
-monsters[0].Characters.Add(new Skeleton());
-
-monsters[1].Characters.Add(new Skeleton());
-monsters[1].Characters.Add(new Skeleton());
-
-Battle battle = new Battle(heroes, monsters);
-battle.Run();
+foreach (Party monsterParty in monsters)
+{
+    Battle battle = new Battle(heroes, monsterParty);
+    battle.Run();
+    if (heroes.IsDefeated) return;
+}

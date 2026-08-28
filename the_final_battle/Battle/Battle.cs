@@ -8,11 +8,11 @@ using FinalBattle.Characters;
 public class Battle
 {
     public Party Heroes { get; private set; }
-    public List<Party> Monsters { get; private set; }
+    public Party Monsters { get; private set; }
     public Party ActiveParty { get; private set; }
-    private Party OpposingParty => ActiveParty == Heroes ? Monsters[0] : Heroes;
+    private Party OpposingParty => ActiveParty == Heroes ? Monsters : Heroes;
 
-    public Battle(Party heroes, params List<Party> monsters)
+    public Battle(Party heroes, Party monsters)
     {
         Heroes = heroes;
         Monsters = monsters;
@@ -39,35 +39,27 @@ public class Battle
             if (target.IsDefeated) 
             {
                 OpposingParty.Characters.Remove(target);
-                Console.WriteLine();
                 Console.WriteLine(target.Name + " has been defeated!");
+                Console.WriteLine();
             }
             if (OpposingParty.IsDefeated)
             {
-                Console.WriteLine();
                 Console.WriteLine("Monster party was defeated!");
-                Monsters.Remove(OpposingParty);
-            }
-            if (Monsters.Count == 0)
-            {
-                EndGame();
+                Console.WriteLine();
+                EndBattle();
                 return false;
             }
-
             Console.WriteLine();
         }
         EndTurn();
-
         return true;
     }
 
     private void EndTurn() => ActiveParty = OpposingParty;
 
-    private void EndGame()
+    private void EndBattle()
     {
-        Console.WriteLine();
         Console.WriteLine("The battle is over");
-
         if (Heroes.IsDefeated)
         {
             Console.WriteLine("The hero's party lost!");
@@ -77,5 +69,11 @@ public class Battle
         {
             Console.WriteLine("The hero's party won the battle!");
         }
+        Console.WriteLine();
+    }
+
+    public void DisplayStatus()
+    {
+
     }
 }
