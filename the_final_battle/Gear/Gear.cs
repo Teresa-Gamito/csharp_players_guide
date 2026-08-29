@@ -4,21 +4,28 @@ using FinalBattle.Attacks;
 
 public interface IGear
 {
-    public string Name { get; }
+    public string ToString();
 
     public IAttack Attack { get; }
 }
 
 public class Sword : IGear
 {
-    public string Name { get; } = "SWORD";
+    public override string ToString() => "SWORD";
 
     public IAttack Attack { get; } = new SlashAttack();
 }
 
 public class Dagger : IGear
 {
-    public string Name { get; } = "DAGGER";
+    public override string ToString() => "DAGGER";
 
     public IAttack Attack { get; } = new StabAttack();
+}
+
+public class VimsBow : IGear
+{
+    public override string ToString() => "VIM'S BOW";
+
+    public IAttack Attack { get; } = new QuickShotAttack();
 }

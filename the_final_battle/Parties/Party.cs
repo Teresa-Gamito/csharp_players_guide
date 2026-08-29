@@ -4,6 +4,7 @@ using FinalBattle.Characters;
 using FinalBattle.Players;
 using FinalBattle.Items;
 using FinalBattle.Gear;
+using FinalBattle.GameConsole;
 
 public class Party
 {
@@ -30,4 +31,22 @@ public class Party
             return true;
         }
     }
+
+    public void Loot(List<IGear> loot)
+    {
+        if (loot.Count == 0) return;
+        Console.Write("Loot: ");
+        GameConsole.DisplayList(loot);
+        UnequipedGear.AddRange(loot);
+    }
+    public void Loot(params IGear[] loot) => Loot(loot.ToList());
+
+    public void Loot(List<IItem> loot)
+    {
+        if (loot.Count == 0) return;
+        Console.Write("Loot: ");
+        GameConsole.DisplayList(loot);
+        Items.AddRange(loot);
+    }
+    public void Loot(params IItem[] loot) => Loot(loot.ToList());
 }

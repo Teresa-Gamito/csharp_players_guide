@@ -10,82 +10,119 @@ using FinalBattle.Gear;
 
 public interface IAction
 {
-    public string Name { get; }
+    public string ToString();
     public void Run(Character user, Battle battle);
 }
 
 public class DoNothingAction : IAction
 {
-    public string Name { get; } = "Do nothing";
+    public override string ToString() => "Do nothing";
 
     public void Run(Character user, Battle battle)
     {
-        Console.WriteLine(user.Name + " did NOTHING");
+        Console.WriteLine($"{user} did NOTHING");
     }
 }
 
 public class AttackAction : IAction
 {
-    public string Name { get; } = "Attack";
+    public override string ToString() => "Attack";
+
+    public Character Target;
+    public IAttack Attack;
+
+    public AttackAction(Character target, IAttack attack)
+    {
+        Target = target;
+        Attack = attack;
+    }
 
     public void Run(Character user, Battle battle)
     {
-        Party party = battle.GetCharacterParty(user);
-        IPlayer player = party.Player;
-        Character target = player.ChooseCharacter(battle.GetOpposingParty(user));
+        AttackData data = Attack.GetData();
 
-        IAttack attack = player.ChooseAttack(user);
-        int damage = attack.GetData().Damage;
+        Random random = new Random();
+        if (random.NextSingle() > data.HitChance)
+        {
+            Console.WriteLine($"{user} MISSED!");
+            return;
+        }
 
-        target.Damage(damage);
-        Console.WriteLine($"{user.Name} used {attack.Name} on {target.Name}.");
-        Console.WriteLine($"{attack.Name} dealt {damage} damage to {target.Name}.");
-        Console.WriteLine($"{target.Name} is now at {target.HP}/{target.MaxHP} HP");
+        Console.WriteLine($"{user} used {Attack} on {Target}.");
+
+        if (Target.HasModifier)
+        {
+            data = Target.Modifier!.Modify(data);
+        }
+
+        Target.Damage(data.Damage);
+        Console.WriteLine($"{Attack} dealt {data.Damage} damage to {Target}.");
+        Console.WriteLine($"{Target} is now at {Target.HP}/{Target.MaxHP} HP");
+
+        if (!Target.IsDefeated) return;
+
+        Party party = battle.GetCharacterParty(Target);
+
+        if (battle.ActiveParty == battle.Heroes)
+        {
+            if (Target.HasGear) battle.ActiveParty.Loot(Target.Gear!);
+        }
+        party.Characters.Remove(Target);
+        Console.WriteLine(Target + " has been defeated!");
+        Console.WriteLine();
     }
 }
 
 public class UseItemAction : IAction
 {
-    public string Name { get; } = "Use item";
+    public override string ToString() => "Use item";
+
+    public IItem Item { get; }
+
+    public UseItemAction(IItem item)
+    {
+        Item = item;
+    }
 
     public void Run(Character user, Battle battle)
     {
         Party party = battle.GetCharacterParty(user);
         IPlayer player = party.Player;
 
-        IItem item = player.ChooseItem(party);
-        Character target = player.ChooseCharacter(party);
+        Console.WriteLine($"{user} used {Item}");
 
-        Console.WriteLine($"{user.Name} used {item.Name} on {target.Name}.");
-
-        item.Use(target);
-        party.Items.Remove(item);
+        Item.Use(user);
+        party.Items.Remove(Item);
     }
 }
 
 public class EquipGearAction : IAction
 {
-    public string Name { get; } = "Equip gear";
+    public override string ToString() => "Equip gear";
+
+    public IGear Gear { get; }
+
+    public EquipGearAction(IGear gear)
+    {
+        Gear = gear;
+    }
 
     public void Run(Character user, Battle battle)
     {
         Party party = battle.GetCharacterParty(user);
         IPlayer player = party.Player;
 
-        if (party.UnequipedGear.Count == 0) return;
+        party.UnequipedGear.Remove(Gear);
 
-        IGear gear = player.ChooseGear(party);
-        party.UnequipedGear.Remove(gear);
-
-        IGear? oldGear = user.EquipGear(gear);
+        IGear? oldGear = user.EquipGear(Gear);
 
         if (oldGear != null)
         {
             party.UnequipedGear.Add(oldGear);
-            Console.WriteLine($"{user.Name} unequiped {oldGear.Name}");
+            Console.WriteLine($"{user} unequiped {oldGear}");
         }
 
-        Console.WriteLine($"{user.Name} equiped {gear.Name}");
+        Console.WriteLine($"{user} equiped {Gear}");
         Console.WriteLine();
     }
 }

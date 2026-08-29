@@ -5,6 +5,8 @@ using FinalBattle.Players;
 using FinalBattle.Actions;
 using FinalBattle.Characters;
 using FinalBattle.GameConsole;
+using FinalBattle.Items;
+using FinalBattle.Gear;
 
 public class Battle
 {
@@ -29,7 +31,7 @@ public class Battle
     {
         foreach (Character character in ActiveParty.Characters)
         {
-            Console.WriteLine("It is " + character.Name + "'s turn...\n");
+            Console.WriteLine("It is " + character + "'s turn...\n");
             GameConsole.DisplayBattleStatus(this, character);
 
             IPlayer player = ActiveParty.Player;
@@ -38,21 +40,16 @@ public class Battle
 
             action.Run(character, this);
 
-            foreach (Character target in OpposingParty.Characters)
-            {
-                if (target.IsDefeated) 
-                {
-                    OpposingParty.Characters.Remove(target);
-                    Console.WriteLine(target.Name + " has been defeated!");
-                    Console.WriteLine();
-                    break;
-                }
-            }
             if (OpposingParty.IsDefeated)
             {
                 Console.WriteLine("Monster party was defeated!");
                 Console.WriteLine();
                 EndBattle();
+                if (ActiveParty == Heroes)
+                {
+                    ActiveParty.Loot(OpposingParty.Items);
+                    ActiveParty.Loot(OpposingParty.UnequipedGear);
+                }
                 return false;
             }
             Console.WriteLine();

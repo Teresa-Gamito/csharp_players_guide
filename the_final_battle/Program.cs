@@ -15,10 +15,10 @@ Console.WriteLine();
 Party heroes = new Party(player1);
 
 string name = heroes.Player.GetPlayerName();
-Character trueProgrammer = new TrueProgrammer(name);
-trueProgrammer.EquipGear(new Sword());
-heroes.Characters.Add(trueProgrammer);
-
+heroes.Characters.Add(new TrueProgrammer(name));
+heroes.Characters.Add(new VimFletcher());
+heroes.Characters[0].EquipGear(new Sword());
+heroes.Characters[1].EquipGear(new VimsBow());
 heroes.Items.Add(new HealthPotion());
 heroes.Items.Add(new HealthPotion());
 heroes.Items.Add(new HealthPotion());
@@ -38,8 +38,12 @@ monsters[1].UnequipedGear.Add(new Dagger());
 monsters[1].Items.Add(new HealthPotion());
 // monster party 3
 monsters.Add(new Party(player2));
-monsters[2].Characters.Add(new UncodedOne());
-monsters[2].Items.Add(new HealthPotion());
+monsters[2].Characters.Add(new StoneAmarok());
+monsters[2].Characters.Add(new StoneAmarok());
+// monster party 4
+monsters.Add(new Party(player2));
+monsters[3].Characters.Add(new UncodedOne());
+monsters[3].Items.Add(new HealthPotion());
 
 Console.WriteLine();
 
