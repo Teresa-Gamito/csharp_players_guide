@@ -3,12 +3,14 @@ namespace FinalBattle.Parties;
 using FinalBattle.Characters;
 using FinalBattle.Players;
 using FinalBattle.Items;
+using FinalBattle.Gear;
 
 public class Party
 {
-    public IPlayer Player { get; set; }
-    public List<Character> Characters { get; set; }
-    public List<IItem> Items { get; set; } = new List<IItem>();
+    public IPlayer Player { get; }
+    public List<Character> Characters { get; } = new List<Character>();
+    public List<IItem> Items { get; } = new List<IItem>();
+    public List<IGear> UnequipedGear { get; } = new List<IGear>();
 
     public Party(IPlayer player, params List<Character> characters)
     {

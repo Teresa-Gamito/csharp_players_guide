@@ -38,11 +38,15 @@ public static class GameConsole
         {
             ConsoleColor color = ConsoleColor.Yellow;
             StringBuilder builder = new StringBuilder();
+
             string name = character.Name;
             string hp = $"( {character.HP}/{character.MaxHP} )";
+            string gear = character.HasGear ? $" ({character.Gear!.Name})" : "";
+
             builder.Append(' ', spacing);
             builder.Append(name);
-            builder.Append(' ', _width / 2 - name.Length - hp.Length);
+            builder.Append(gear);
+            builder.Append(' ', _width / 2 - name.Length - hp.Length - gear.Length);
             builder.Append(hp);
             if (character == activeCharacter)
             {

@@ -6,6 +6,7 @@ using FinalBattle.Characters;
 using FinalBattle.Parties;
 using FinalBattle.Items;
 using FinalBattle.Battle;
+using FinalBattle.Gear;
 
 public interface IPlayer
 {
@@ -15,11 +16,14 @@ public interface IPlayer
     public Character ChooseCharacter(Party party);
     public IAttack ChooseAttack(Character character);
     public IItem ChooseItem(Party party);
+    public IGear ChooseGear(Party party);
 }
 
 public class PlayerAI : IPlayer
 {
     private Random _random = new Random();
+    public float _chooseItemChance = 0.25f;
+    public float _chooseGearChance = 0.5f;
 
     public string GetPlayerName()
     {
@@ -30,10 +34,23 @@ public class PlayerAI : IPlayer
     {
         Thread.Sleep(1000);
         Party party = battle.GetCharacterParty(character);
+
         if (character.HP <= character.MaxHP / 4 && party.Items.Count > 0)
         {
-            return new UseItemAction();
+            if (_random.NextSingle() < _chooseItemChance)
+            {
+                return new UseItemAction();
+            }
         }
+
+        if (party.UnequipedGear.Count > 0)
+        {
+            if (_random.NextSingle() < _chooseGearChance)
+            {
+                return new EquipGearAction();
+            }
+        }
+
         return new AttackAction();
     }
 
@@ -50,15 +67,18 @@ public class PlayerAI : IPlayer
         return lowHPCharacter;
     }
 
-    public IAttack ChooseAttack(Character character) 
+    public IAttack ChooseAttack(Character character)
     {
-        return ChooseRandom(character.Attacks);
+        if (character.HasGear)
+        {
+            return character.Gear!.Attack;
+        }
+        return character.Attack;
     }
 
-    public IItem ChooseItem(Party party)
-    {
-        return ChooseRandom(party.Items);
-    }
+    public IItem ChooseItem(Party party) => ChooseRandom(party.Items);
+
+    public IGear ChooseGear(Party party) => ChooseRandom(party.UnequipedGear);
 
     private T ChooseRandom<T>(List<T> list)
     {
@@ -66,6 +86,7 @@ public class PlayerAI : IPlayer
         int index = _random.Next(optionCount);
         return list[index];
     }
+
 }
 
 public class PlayerHuman : IPlayer
@@ -82,17 +103,23 @@ public class PlayerHuman : IPlayer
     {
         Party party = battle.GetCharacterParty(user);
         bool hasItem = party.Items.Count > 0;
+        bool hasGear = party.UnequipedGear.Count > 0;
+
         Console.WriteLine($"1 - Attack");
         if (hasItem) Console.WriteLine($"2 - Use item");
-        Console.WriteLine($"3 - Do nothing");
+        if (hasGear) Console.WriteLine($"3 - Equip gear");
+        Console.WriteLine($"4 - Do nothing");
         Console.Write("What do you want to do? ");
+
         string input = Console.ReadLine()!;
         Console.WriteLine();
+
         return input switch
         {
             "1" => new AttackAction(),
             "2" => hasItem ? new UseItemAction() : ChooseAction(user, battle),
-            "3" => new DoNothingAction(),
+            "3" => hasGear ? new EquipGearAction() : ChooseAction(user, battle),
+            "4" => new DoNothingAction(),
             _ => ChooseAction(user, battle)
         };
     }
@@ -105,7 +132,7 @@ public class PlayerHuman : IPlayer
             Console.WriteLine($"{i} - {character.Name} ({character.HP}/{character.MaxHP})");
             i++;
         }
-        Console.Write("Target: ");
+        Console.Write("Which character do you want to target? ");
         string input = Console.ReadLine()!;
         int option = Convert.ToInt32(input);
         Console.WriteLine();
@@ -114,17 +141,24 @@ public class PlayerHuman : IPlayer
 
     public IAttack ChooseAttack(Character character)
     {
-        int i = 1;
-        foreach (IAttack attack in character.Attacks)
+        Console.WriteLine($"1 - {character.Attack.Name}");
+        if (character.HasGear)
         {
-            Console.WriteLine($"{i} - {attack.Name}");
-            i++;
+            IGear gear = character.Gear!;
+            Console.WriteLine($"2 - {gear.Attack.Name} ({gear.Name})");
         }
-        Console.Write("What do you want to do? ");
+
+        Console.Write("Which attack do you want to use? ");
         string input = Console.ReadLine()!;
-        int option = Convert.ToInt32(input);
+
         Console.WriteLine();
-        return character.Attacks[option - 1];
+
+        return input switch
+        {
+            "1" => character.Attack,
+            "2" => character.HasGear ? character.Gear!.Attack : ChooseAttack(character),
+            _ => ChooseAttack(character)
+        };
     }
 
     public static (IPlayer player1, IPlayer player2) ChoosePlayers()
@@ -142,7 +176,7 @@ public class PlayerHuman : IPlayer
             "1" => (new PlayerHuman(), new PlayerAI()),
             "2" => (new PlayerAI(), new PlayerAI()),
             "3" => (new PlayerHuman(), new PlayerHuman()),
-            _ => ChoosePlayers()
+                _ => ChoosePlayers()
         };
     }
 
@@ -159,5 +193,20 @@ public class PlayerHuman : IPlayer
         int option = Convert.ToInt32(input);
         Console.WriteLine();
         return party.Items[option - 1];
+    }
+
+    public IGear ChooseGear(Party party)
+    {
+        int i = 1;
+        foreach (IGear gear in party.UnequipedGear)
+        {
+            Console.WriteLine($"{i} - {gear.Name}");
+            i++;
+        }
+        Console.Write("Which gear do you want to equip? ");
+        string input = Console.ReadLine()!;
+        int option = Convert.ToInt32(input);
+        Console.WriteLine();
+        return party.UnequipedGear[option - 1];
     }
 }
